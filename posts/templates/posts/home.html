@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block 'titulo' %}Principais {% endblock %}
+
+{% block 'conteudo' %}
+<section style="margin: 30px;">
+    {% for noticia in noticias %}
+        <a href="{{ noticia.link }}" target="_blank" style="text-decoration: none; color: black;">
+            <div class="card" style="width: 19rem; display: inline-grid; margin: 5px;">
+                <img src="{{ noticia.video }}" height="150" width="300">
+                <div class="card-body">
+                  <h4>{{ noticia.titulo }}</h4>
+                  <hr>
+                  <small>{{ noticia.descricao }}</small>
+                  <hr>
+                  <small>
+                      {{ noticia.fonte }}<br>
+                      {{ noticia.data }}
+                  </small>
+              </div>
+        </div>
+        </a>
+    {% endfor %}
+</section>
+{% endblock %}

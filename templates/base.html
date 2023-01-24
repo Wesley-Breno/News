@@ -1,0 +1,26 @@
+{% load static %}
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block 'titulo' %}{% endblock %} notícias</title>
+    <link rel="shortcut icon" href="https://www.pikpng.com/pngl/b/130-1303637_technology-icon-orange-information-technology-icon-clipart.png" type="image/x-icon">
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <style>
+        .card:hover{
+            box-shadow: 0px 0px 12px 0px black;
+        }
+    </style>
+</head>
+<body>
+    {% include 'parciais/_header.html' %}
+    {% block 'conteudo' %}{% endblock %}
+    <div style="margin: 30px;"></div>
+    {% include 'parciais/_footer.html' %}
+    <script src="{% static 'vendor/jquery/jquery.slim.min.js' %}"></script>
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+</body>
+</html>
