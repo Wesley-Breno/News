@@ -4,6 +4,6 @@ from noticias import noticia
 
 def home(request):
     data = {}
-    data['noticias'] = noticia(0)
-    data['noticias'] += noticia(1)
+    data['noticias_g1'] = noticia(0)
+    data['noticias_olhar_digital'] = noticia(1)
     return render(request, 'posts/home.html', data)

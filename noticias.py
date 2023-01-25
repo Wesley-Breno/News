@@ -42,7 +42,7 @@ def noticia(site):
         cont = 0
         noticias = dict()
 
-        while cont != 10:
+        while cont != 8:
             try:
                 print(videos[cont][0])
             except:
@@ -87,7 +87,7 @@ def noticia(site):
         cont = 0
         noticias = dict()
 
-        while cont != 10:
+        while cont != 8:
             try:
                 noticias[cont] = {"titulo": titulos[cont].text, "descricao": descricao[cont].text,
                                           "data": 'Recentemente',
