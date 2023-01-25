@@ -1,27 +1,27 @@
 {% load static %}
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="padding-left: 30px; padding-right: 30px">
-  <a class="navbar-brand" href="{% url 'home' %}">Notícias</a>
+<nav class="navbar bg-dark" data-bs-theme="dark">
+<a href="#" style="color: white; text-decoration: none;"><h4>Notícias</h4></a>
 
-  <button type="button" class="btn btn-primary btn-light" data-toggle="modal" data-target="#exampleModal{{ noticias_g1|length }}" style="margin: 15px; background-color: #343a40; color: white; border: none">
-      Sobre
-  </button>
+<button type="button" class="btn btn-primary btn-light" data-toggle="modal" data-target="#exampleModal{{ noticias_g1|length }}" style="margin: 15px; background-color: #343a40; color: white; border: none">
+    Sobre
+</button>
 
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal{{ noticias_g1|length }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Sobre</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            Site feito com a intenção de capturar notícias de sítes específicos da Internet. Com o uso deste síte você podera ver as recentes notícias sobre tecnologia em diferentes sítes de notícias, sem a necessidade de visitar cada um deles para ter um amplo conhecimento das notícias mais recentes.
-          </div>
-          <div class="modal-footer">
-          </div>
-        </div>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal{{ noticias_g1|length }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Sobre</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Site feito com a intenção de capturar notícias de sítes específicos da Internet. Com o uso deste síte você podera ver as recentes notícias sobre tecnologia em diferentes sítes de notícias, sem a necessidade de visitar cada um deles para ter um amplo conhecimento das notícias mais recentes.
+      </div>
+      <div class="modal-footer">
       </div>
     </div>
+  </div>
+</div>
 </nav>

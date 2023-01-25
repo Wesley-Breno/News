@@ -3,12 +3,12 @@
 {% block 'titulo' %}Principais {% endblock %}
 
 {% block 'conteudo' %}
-<section style="margin: 20px; background-color: #a80000; padding: 20px; border-radius: 20px;">
+<section style="margin: 0px; background-color: #a80000; padding: 20px;">
     <img src="http://s2.glbimg.com/81kkB5BuyLC-8Nko958tkm5BrJg=/0x47:1700x1002/432x243/s.glbimg.com/jo/g1/f/original/2017/06/10/ultimasnoticias.jpg" width="325">
     <br>
     {% for noticia in noticias_g1 %}
         <a href="{{ noticia.link }}" target="_blank" style="text-decoration: none; color: black;">
-            <div class="card" style="width: 18rem; display: inline-grid; margin: 10px;">
+            <div class="card" style="width: 18rem; display: inline-grid; margin: 14px;">
                 <img src="{{ noticia.video }}" height="150" width="285" style="border-radius: 5px;">
                 <div class="card-body">
                   <h4>{{ noticia.titulo }}</h4>
@@ -24,13 +24,12 @@
         </a>
     {% endfor %}
 </section>
-    <hr>
-<section style="margin: 20px; background-color: black; padding: 20px; border-radius: 20px;">
+<section style="margin: 0px; background-color: black; padding: 20px;">
     <img src="https://img.olhardigital.com.br/wp-content/uploads/2022/08/olhar-digital-logo.jpg" width="325">
     <br>
     {% for noticia in noticias_olhar_digital %}
         <a href="{{ noticia.link }}" target="_blank" style="text-decoration: none; color: black;">
-            <div class="card" id="olhar-digital" style="width: 18rem; display: inline-grid; margin: 10px;">
+            <div class="card" id="olhar-digital" style="width: 18rem; display: inline-grid; margin: 14px;">
                 <img src="{{ noticia.video }}" height="150" width="285" style="border-radius: 5px;">
                 <div class="card-body">
                   <h4>{{ noticia.titulo }}</h4>
