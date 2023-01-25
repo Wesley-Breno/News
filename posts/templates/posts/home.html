@@ -8,7 +8,7 @@
     <br>
     {% for noticia in noticias_g1 %}
         <a href="{{ noticia.link }}" target="_blank" style="text-decoration: none; color: black;">
-            <div class="card" style="width: 18rem; display: inline-grid; margin: 14px;">
+            <div class="card" style="width: 18rem; display: inline-grid; margin: 14px; margin-left: 20px">
                 <img src="{{ noticia.video }}" height="150" width="285" style="border-radius: 5px;">
                 <div class="card-body">
                   <h4>{{ noticia.titulo }}</h4>
@@ -29,7 +29,7 @@
     <br>
     {% for noticia in noticias_olhar_digital %}
         <a href="{{ noticia.link }}" target="_blank" style="text-decoration: none; color: black;">
-            <div class="card" id="olhar-digital" style="width: 18rem; display: inline-grid; margin: 14px;">
+            <div class="card" id="olhar-digital" style="width: 18rem; display: inline-grid; margin: 14px; margin-left: 20px">
                 <img src="{{ noticia.video }}" height="150" width="285" style="border-radius: 5px;">
                 <div class="card-body">
                   <h4>{{ noticia.titulo }}</h4>
