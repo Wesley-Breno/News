@@ -36,7 +36,7 @@ def noticia(site):
         for foto in fotos:
             a = str(foto)
             fotos_links.append(re.findall(
-                r'https://s2.glbimg.com/-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*=/[\d]{3}x[\d]{3}/top/smart/https://i.s3.glbimg.com/v1/AUTH_[a-z\d]*/internal_photos/\w*/\d*/\w*/\w*/[a-z\d]*/-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*\.\w*',
+                r'https://s2.glbimg.com/-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*=/[\d]{3}x[\d]{3}/top/smart/https://i.s3.glbimg.com/v1/-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*/-*[a-z\d]*_*-*[a-z\d]*_*/-*[a-z\d]*_*/-*[a-z\d]*_*/-*[a-z\d]*_*/-*[a-z\d]*_*/-*[a-z\d]*_*-*[a-z\d]*_*/-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*\.\w+',
                 a, re.I))
 
         cont = 0
