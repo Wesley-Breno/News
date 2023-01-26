@@ -23,9 +23,7 @@ def noticia(site):
 
         for titulo in titulos:
             a = str(titulo)
-            links.append(re.findall(
-                r'https://[a-z0-9]+\.[a-z0-9]+\.[a-z]{3}/*[a-z0-9]*/*[a-z0-9]*/[a-z0-9]*/*\d*/*\d*/[a-z\d]*-*[\da-z]*-*[\da-z]*-*[a-z\d]*-*[a-z\d]*-*[a-z\d]*-*[a-z\d]*-*[a-z\d]*-*[a-z\d]*-*[a-z\d]*-*[a-z\d]*-*[a-z\d]*-*[a-z\d]*-*[a-z\d]*-*[a-z\d]*-*[a-z\d]*-*[a-z\d]*-*[a-z\d]*-*[a-z\d]*-*[a-z\d]*-*[a-z\d]*-*[a-z\d]*-*[a-z\d]*-*[a-z\d]*-*[a-z\d]*-*[a-z\d]*-*[a-z\d]*\.ghtml',
-                a))
+            links.append(re.findall(r'https://g1.globo.com/[a-z\d]*_*-*\.*/[a-z\d]*_*-*\.*/[a-z\d]*_*-*\.*/[a-z\d]*_*-*\.*/[a-z\d]*_*-*\.*/[a-z\d]*_*-*\.*/*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*', a, re.I))
 
         for video in videos_image:
             a = str(video)
