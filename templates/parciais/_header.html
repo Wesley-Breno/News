@@ -1,9 +1,6 @@
 {% load static %}
-<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #a80000; padding-left:40px;">
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #a80000; padding-left:40px; padding: 20px;">
   <a class="navbar-brand" href="#" id="noticias">Notícias</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
@@ -19,7 +16,7 @@
     </ul>
   </div>
 
-  <button type="button" id="sobre" data-toggle="modal" data-target="#exampleModal{{ noticias_g1|length }}" style="padding: 15px; background-color: #a80000; color: white; border: none; margin: 10px">
+  <button type="button" id="sobre" data-toggle="modal" data-target="#exampleModal{{ noticias_g1|length }}" style="background-color: #a80000; color: white; border: none; margin: 5px">
     Sobre
 </button>
 
@@ -40,6 +37,5 @@
       </div>
     </div>
   </div>
-</div>
 </div>
 </nav>

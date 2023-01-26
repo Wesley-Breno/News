@@ -3,46 +3,52 @@
 {% block 'titulo' %}Principais {% endblock %}
 
 {% block 'conteudo' %}
-<section style="margin: 0px; background-color: #a80000; padding: 20px;" id="g1">
-    <img src="http://s2.glbimg.com/81kkB5BuyLC-8Nko958tkm5BrJg=/0x47:1700x1002/432x243/s.glbimg.com/jo/g1/f/original/2017/06/10/ultimasnoticias.jpg" width="325">
+<section style="margin: 0px; background-color: #e7e6e9; padding: 20px;" id="g1">
+    <img src="https://thumbs.gfycat.com/AmbitiousUltimateHalcyon-size_restricted.gif" width="225">
     <br>
+
     {% for noticia in noticias_g1 %}
-        <a href="{{ noticia.link }}" target="_blank" style="text-decoration: none; color: black;">
-            <div class="card" style="width: 18rem; display: inline-grid; margin: 14px; margin-left: 20px">
-                <img src="{{ noticia.video }}" height="150" width="285" style="border-radius: 5px;">
-                <div class="card-body">
-                  <h4>{{ noticia.titulo }}</h4>
-                  <hr>
-                  <small>{{ noticia.descricao }}</small>
-                  <hr>
-                  <small>
-                      {{ noticia.fonte }}<br>
-                      {{ noticia.data }}
-                  </small>
-              </div>
+    <a href="{{ noticia.link }}" target="_blank">
+        <div class="card bg-dark text-white" style="display: inline-grid; margin-bottom: 10px; width: 315px; margin-left: 7px;">
+            <img class="card-img" src="{{ noticia.video }}" alt="Imagem do card">
+            <div class="card-img-overlay" style="background-color: rgba(0, 0, 0, 0.747);">
+                <h6 class="card-title">{{ noticia.titulo }}</h6>
+                <p class="card-text">{{ noticia.data }}</p>
+            </div>
         </div>
-        </a>
+    </a>
     {% endfor %}
 </section>
-<section style="margin: 0px; background-color: black; padding: 20px;" id="olhar">
-    <img src="https://img.olhardigital.com.br/wp-content/uploads/2022/08/olhar-digital-logo.jpg" width="325">
+<section style="margin: 0px; background-image: url(https://i.pinimg.com/originals/b0/f9/5d/b0f95d232c6aa2dd5b91fa3f1a3a6532.gif); padding: 20px;" id="olhar">
+    <img src="https://img.olhardigital.com.br/wp-content/uploads/2020/12/hdr-logo.png" width="250" style="padding: 20px">
     <br>
     {% for noticia in noticias_olhar_digital %}
-        <a href="{{ noticia.link }}" target="_blank" style="text-decoration: none; color: black;">
-            <div class="card" id="olhar-digital" style="width: 18rem; display: inline-grid; margin: 14px; margin-left: 20px">
-                <img src="{{ noticia.video }}" height="150" width="285" style="border-radius: 5px;">
-                <div class="card-body">
-                  <h4>{{ noticia.titulo }}</h4>
-                  <hr>
-                  <small>{{ noticia.descricao }}</small>
-                  <hr>
-                  <small>
-                      {{ noticia.fonte }}<br>
-                      {{ noticia.data }}
-                  </small>
-              </div>
+        <a href="{{ noticia.link }}" target="_blank">
+        <div class="card bg-dark text-white" style="display: inline-grid; margin-bottom: 10px; width: 315px; margin-left: 7px;">
+            <img class="card-img" src="{{ noticia.video }}" alt="Imagem do card">
+            <div class="card-img-overlay" style="background-color: rgba(0, 0, 0, 0.747);">
+                <h6 class="card-title">{{ noticia.titulo }}</h6>
+                <p class="card-text">{{ noticia.data }}</p>
+            </div>
         </div>
         </a>
     {% endfor %}
+    <section class="mb-4">
+      <a class="btn btn-outline-light btn-floating m-1" href="https://wesley-breno.github.io/Portfolio/" target="_blank" role="button"
+        ><i> <img src="https://cdn-icons-png.flaticon.com/512/3242/3242120.png" width="20"></i
+      ></a>
+
+      <a class="btn btn-outline-light btn-floating m-1" href="https://www.linkedin.com/in/wesley-breno-ba2b33208/" target="_blank" role="button"
+        ><i> <img src="https://cdn-icons-png.flaticon.com/512/220/220343.png" width="20"></i
+      ></a>
+
+      <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/Wesley-Breno" target="_blank" role="button"
+        ><i> <img src="https://cdn1.iconfinder.com/data/icons/logos-and-brands-3/512/142_Github_logo_logos-512.png" width="21"> </i
+      ></a>
+
+      <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/_wesleybreno_/" target="_blank" role="button"
+        ><i> <img src="https://cdn-icons-png.flaticon.com/512/87/87390.png" width="20"> </i
+      ></a>
+    </section>
 </section>
 {% endblock %}
