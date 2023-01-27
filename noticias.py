@@ -23,7 +23,7 @@ def noticia(site):
 
         for titulo in titulos:
             a = str(titulo)
-            links.append(re.findall(r'https://g1.globo.com/[a-z\d]*_*-*\.*/[a-z\d]*_*-*\.*/[a-z\d]*_*-*\.*/[a-z\d]*_*-*\.*/[a-z\d]*_*-*\.*/[a-z\d]*_*-*\.*/*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*', a, re.I))
+            links.append(re.findall(r'https://g1.globo.com/[a-z\d]*_*-*\.*/[a-z\d]*_*-*\.*/[a-z\d]*_*-*\.*/[a-z\d]*_*-*\.*/*[a-z\d]*_*-*\.*/*[a-z\d]*_*-*\.*/*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*', a, re.I))
 
         for video in videos_image:
             a = str(video)
@@ -42,7 +42,10 @@ def noticia(site):
 
         while cont != 8:
             try:
-                print(videos[cont][0])
+                noticias[cont] = {"titulo": titulos[cont].text, "descricao": descricao[cont].text,
+                                  "data": data[cont].text,
+                                  'link': links[cont][0], 'fonte': url, 'video': videos[cont][0]}
+                cont += 1
             except:
                 try:
                     noticias[cont] = {"titulo": titulos[cont].text, "descricao": descricao[cont].text,
@@ -50,15 +53,17 @@ def noticia(site):
                                       'link': links[cont][0], 'fonte': url, 'video': fotos_links[cont][0]}
                     cont += 1
                 except:
-                    noticias[cont] = {"titulo": titulos[cont].text, "descricao": descricao[cont].text,
-                                      "data": data[cont].text,
-                                      'link': links[cont][0], 'fonte': url, 'video': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9mrGfEBT_6SqNTTNZIkKSb-2hl-XwhzBxpajh0dTxocQlrLMF5R0NW5j3ljTs8y9C3G8&usqp=CAU'}
-                    cont += 1
-            else:
-                noticias[cont] = {"titulo": titulos[cont].text, "descricao": descricao[cont].text,
-                                  "data": data[cont].text,
-                                  'link': links[cont][0], 'fonte': url, 'video': videos[cont][0]}
-                cont += 1
+                    try:
+                        noticias[cont] = {"titulo": titulos[cont].text, "descricao": descricao[cont].text,
+                                          "data": data[cont].text,
+                                          'link': links[cont][0], 'fonte': url, 'video': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9mrGfEBT_6SqNTTNZIkKSb-2hl-XwhzBxpajh0dTxocQlrLMF5R0NW5j3ljTs8y9C3G8&usqp=CAU'}
+                        cont += 1
+                    except:
+                        noticias[cont] = {"titulo": titulos[cont].text, "descricao": descricao[cont].text,
+                                          "data": data[cont].text,
+                                          'link': 'https://g1.globo.com/tecnologia/', 'fonte': url,
+                                          'video': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9mrGfEBT_6SqNTTNZIkKSb-2hl-XwhzBxpajh0dTxocQlrLMF5R0NW5j3ljTs8y9C3G8&usqp=CAU'}
+                        cont += 1
 
         for noticia in noticias.values():
             lista.append(noticia)
@@ -101,3 +106,7 @@ def noticia(site):
             lista.append(noticia)
 
     return lista
+
+
+if __name__ == "__main__":
+    noticia(0)
