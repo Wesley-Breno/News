@@ -85,7 +85,7 @@ def noticia(site):
             links.append(re.findall('href=\"(https://olhardigital.com.br/\d*/\d*/\d*/-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*/-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*/)\"', str(link), re.I))
 
         for image in images:
-            imagens.append(re.findall(r'src=\"(https://img.olhardigital.com.br/wp-content/uploads/\d*/\d*/-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*\w*)\"', str(image), re.I))
+            imagens.append(re.findall(r'src=\"(https://img.olhardigital.com.br/wp-content/uploads/\d*/\d*/-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*\w*)\"', str(image), re.I))
 
         cont = 0
         noticias = dict()
