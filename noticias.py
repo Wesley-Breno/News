@@ -23,7 +23,7 @@ def noticia(site):
 
         for titulo in titulos:
             a = str(titulo)
-            links.append(re.findall(r'https://g1.globo.com/[a-z\d]*_*-*\.*/[a-z\d]*_*-*\.*/[a-z\d]*_*-*\.*/[a-z\d]*_*-*\.*/*[a-z\d]*_*-*\.*/*[a-z\d]*_*-*\.*/*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*', a, re.I))
+            links.append(re.findall(r'https://g1.globo.com/[a-z\d]*_*-*\.*/[a-z\d]*_*-*\.*/[a-z\d]*_*-*\.*/[a-z\d]*_*-*\.*/*[a-z\d]*_*-*\.*/*[a-z\d]*_*-*\.*/*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*', a, re.I))
 
         for video in videos_image:
             a = str(video)
@@ -56,13 +56,13 @@ def noticia(site):
                     try:
                         noticias[cont] = {"titulo": titulos[cont].text, "descricao": descricao[cont].text,
                                           "data": data[cont].text,
-                                          'link': links[cont][0], 'fonte': url, 'video': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9mrGfEBT_6SqNTTNZIkKSb-2hl-XwhzBxpajh0dTxocQlrLMF5R0NW5j3ljTs8y9C3G8&usqp=CAU'}
+                                          'link': links[cont][0], 'fonte': url, 'video': 'https://www.observatoriodaimprensa.com.br/wp-content/uploads/2019/10/8-6-540x304.jpg'}
                         cont += 1
                     except:
                         noticias[cont] = {"titulo": titulos[cont].text, "descricao": descricao[cont].text,
                                           "data": data[cont].text,
                                           'link': 'https://g1.globo.com/tecnologia/', 'fonte': url,
-                                          'video': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9mrGfEBT_6SqNTTNZIkKSb-2hl-XwhzBxpajh0dTxocQlrLMF5R0NW5j3ljTs8y9C3G8&usqp=CAU'}
+                                          'video': 'https://www.observatoriodaimprensa.com.br/wp-content/uploads/2019/10/8-6-540x304.jpg'}
                         cont += 1
 
         for noticia in noticias.values():
@@ -99,7 +99,7 @@ def noticia(site):
             except:
                 noticias[cont] = {"titulo": titulos[cont].text, "descricao": descricao[cont].text,
                                   "data": 'Recentemente',
-                                  'link': links[cont][0], 'fonte': url, 'video': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9mrGfEBT_6SqNTTNZIkKSb-2hl-XwhzBxpajh0dTxocQlrLMF5R0NW5j3ljTs8y9C3G8&usqp=CAU'}
+                                  'link': links[cont][0], 'fonte': url, 'video': 'https://www.observatoriodaimprensa.com.br/wp-content/uploads/2019/10/8-6-540x304.jpg'}
                 cont += 1
 
         for noticia in noticias.values():
