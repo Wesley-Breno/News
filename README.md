@@ -1,5 +1,5 @@
 <h1 align="center">Notícias automatizadas</h1>
-<div style="display: inline-block;"><img src="images_readme/globo.png" width="500px"> <img src="images_readme/olhardigital.png" width="500px"></div>
+<div style="display: inline-block;" align="center"><img src="images_readme/globo.png" width="500px"> <img src="images_readme/olhardigital.png" width="500px"></div>
 
 <p align="center"><br>Clique aqui para acessar o <a href="https://web-production-6a88.up.railway.app/#" target="_blank">projeto</a>.</p>
 
