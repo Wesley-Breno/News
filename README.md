@@ -1,8 +1,6 @@
 <h1 align="center">Notícias automatizadas</h1>
 <div style="display: inline-block;" align="center"><img src="images_readme/globo.png" width="500px"> <img src="images_readme/olhardigital.png" width="500px"></div>
 
-<p align="center"><br>Clique aqui para acessar o <a href="https://web-production-6a88.up.railway.app/#" target="_blank">projeto</a>.</p>
-
 <h2 align="center">Resumo</h2>
 <p>
   Este site é responsável por fazer a raspagem de dados de sites de notícias e mostrar as notícias mais recentes destes sites, sem a necessidade de visitar cada site para ter um amplo conhecimento das notícias recentes relacionadas à tecnologia.
