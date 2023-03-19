@@ -23,19 +23,28 @@ def noticia(site):
 
         for titulo in titulos:
             a = str(titulo)
-            links.append(re.findall(r'https://g1.globo.com/[a-z\d]*_*-*\.*/[a-z\d]*_*-*\.*/[a-z\d]*_*-*\.*/[a-z\d]*_*-*\.*/*[a-z\d]*_*-*\.*/*[a-z\d]*_*-*\.*/*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*', a, re.I))
+            if len(links) == 8:
+                break
+            else:
+                links.append(re.findall(r'https://g1.globo.com/[a-z\d]*_*-*\.*/[a-z\d]*_*-*\.*/[a-z\d]*_*-*\.*/[a-z\d]*_*-*\.*/*[a-z\d]*_*-*\.*/*[a-z\d]*_*-*\.*/*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*[a-z\d]*_*-*\.*\#*\,*', a, re.I))
 
         for video in videos_image:
             a = str(video)
-            videos.append(re.findall(
-                r'https://s2.glbimg.com/-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*=/[\d]{3}x[\d]{3}/top/smart/filters:max_age\(3600\)/https://s01.video.glbimg.com/deo/vi/\d*/\d*/\d*',
-                a, re.I))
+            if len(videos) == 8:
+                break
+            else:
+                videos.append(re.findall(
+                    r'https://s2.glbimg.com/-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*=/[\d]{3}x[\d]{3}/top/smart/filters:max_age\(3600\)/https://s01.video.glbimg.com/deo/vi/\d*/\d*/\d*',
+                    a, re.I))
 
         for foto in fotos:
             a = str(foto)
-            fotos_links.append(re.findall(
-                r'https://s2.glbimg.com/-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*=/[\d]{3}x[\d]{3}/top/smart/https://i.s3.glbimg.com/v1/-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*/-*[a-z\d]*_*-*[a-z\d]*_*/-*[a-z\d]*_*/-*[a-z\d]*_*/-*[a-z\d]*_*/-*[a-z\d]*_*/-*[a-z\d]*_*-*[a-z\d]*_*/-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*\.\w+',
-                a, re.I))
+            if len(fotos_links) == 8:
+                break
+            else:
+                fotos_links.append(re.findall(
+                    r'https://s2.glbimg.com/-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*=/[\d]{3}x[\d]{3}/top/smart/https://i.s3.glbimg.com/v1/-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*/-*[a-z\d]*_*-*[a-z\d]*_*/-*[a-z\d]*_*/-*[a-z\d]*_*/-*[a-z\d]*_*/-*[a-z\d]*_*/-*[a-z\d]*_*-*[a-z\d]*_*/-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*\.\w+',
+                    a, re.I))
 
         cont = 0
         noticias = dict()
@@ -82,10 +91,16 @@ def noticia(site):
         imagens = []
 
         for link in enderecos:
-            links.append(re.findall('href=\"(https://olhardigital.com.br/\d*/\d*/\d*/-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*/-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*/)\"', str(link), re.I))
+            if len(links) == 8:
+                break
+            else:
+                links.append(re.findall('href=\"(https://olhardigital.com.br/\d*/\d*/\d*/-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*/-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*-*[a-z\d]*_*/)\"', str(link), re.I))
 
         for image in images:
-            imagens.append(re.findall(r'src=\"(https://img.olhardigital.com.br/wp-content/uploads/\d*/\d*/-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*\w*)\"', str(image), re.I))
+            if len(imagens) == 8:
+                break
+            else:
+                imagens.append(re.findall(r'src=\"(https://img.olhardigital.com.br/wp-content/uploads/\d*/\d*/-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*[a-z\d]*_*-*\.*\w*)\"', str(image), re.I))
 
         cont = 0
         noticias = dict()
@@ -106,7 +121,3 @@ def noticia(site):
             lista.append(noticia)
 
     return lista
-
-
-if __name__ == "__main__":
-    noticia(0)
