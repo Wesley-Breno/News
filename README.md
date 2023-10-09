@@ -1,17 +1,17 @@
-<h1 align="center">Notícias automatizadas</h1>
+<h1 align="center">Automated News</h1>
 <div style="display: inline-block;" align="center"><img src="images_readme/globo.png" width="500px"> <img src="images_readme/olhardigital.png" width="500px"></div>
 
-<h2 align="center">Resumo</h2>
+<h2 align="center">Resume</h2>
 <p>
-  Este site é responsável por fazer a raspagem de dados de sites de notícias e mostrar as notícias mais recentes destes sites, sem a necessidade de visitar cada site para ter um amplo conhecimento das notícias recentes relacionadas à tecnologia.
+  This website is responsible for scraping data from news websites and showing the latest news from these websites, without the need to visit each website to have a broad knowledge of recent news related to technology.
 </p>
 
-<h2 align="center">Funcionalidade</h2>
+<h2 align="center">Functionality</h2>
 <p>
-  O site faz o scrape de informações de sites de noticias na seção de tecnologia. Utiliza a biblioteca "requests" para acessar a URL da página e a biblioteca "BeautifulSoup" para extrair informações de cada site de noticia. As informações extraídas incluem títulos, descrições, datas e uso de RegEx para extrair links de vídeos e fotos. Os dados extraidos são armazenados e depois mostrados no propio site do projeto com as 8 noticias mais recentes de cada site de noticia.
+  The site scrapes information from news sites in the technology section. It uses the "requests" library to access the page URL and the "BeautifulSoup" library to extract information from each news site. Extracted information includes titles, descriptions, dates, and using RegEx to extract links from videos and photos. The extracted data is stored and then displayed on the project's own website with the 8 most recent news from each news site.
 </p>
 
-<h2 align="center">Tecnologias usadas</h2>
+<h2 align="center">Technologies used</h2>
  <p align="center">
   <a href='https://www.python.org/' target='_blank'>
 	<img src='https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg' width='40' height='40'>
